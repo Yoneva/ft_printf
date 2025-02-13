@@ -6,12 +6,11 @@
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 21:21:12 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/24 18:01:14 by amsbai           ###   ########.fr       */
+/*   Updated: 2024/11/26 00:35:37 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
 int	ft_putstr(char *s)
 {

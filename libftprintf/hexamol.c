@@ -6,13 +6,13 @@
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 16:11:16 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/24 21:43:26 by amsbai           ###   ########.fr       */
+/*   Updated: 2024/11/25 23:27:23 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	tanchof4(t_flags a, char hexa)
+int	print0x(t_flags a, char hexa)
 {
 	int	size;
 
@@ -34,14 +34,16 @@ int	hexamol(unsigned long n, char hexa, int a, t_flags hh)
 	char		*str;
 
 	size = 0;
-	if (hexa == 'x' || hexa == 'p')
+	if (n == 0)
+		return (size + ft_putchar('0'));
+	if (hexa == 'x')
 		str = "0123456789abcdef";
 	if (hexa == 'X')
 		str = "0123456789ABCDEF";
 	if (a == 0)
 		i = 0;
 	if (i == 0)
-		size += tanchof4(hh, hexa);
+		size += print0x(hh, hexa);
 	i = 1;
 	if (n >= 16)
 	{

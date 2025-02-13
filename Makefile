@@ -6,21 +6,23 @@
 #    By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/22 16:40:23 by amsbai            #+#    #+#              #
-#    Updated: 2024/11/24 21:44:07 by amsbai           ###   ########.fr        #
+#    Updated: 2024/11/25 20:07:56 by amsbai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =  libftprintf.a
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 SRCS =  libftprintf/ft_putchar.c \
 		libftprintf/ft_putstr.c \
 		libftprintf/ft_putnbr.c \
 		libftprintf/ft_strlen.c \
 		libftprintf/hexamol.c \
-		ft_printf.c
+		ft_printf.c \
+		libftprintf/Anormfix.c \
+		libftprintf/addresss.c
 OBJS = $(SRCS:.c=.o)
-# HEADER = ft_printf.h
+HEADER = ft_printf.h
 
 # prerequisite
 all: $(NAME)
@@ -28,7 +30,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	
-.c.o:
+.c.o: $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

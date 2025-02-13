@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   addresss.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/19 23:16:47 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/25 20:00:26 by amsbai           ###   ########.fr       */
+/*   Created: 2024/11/25 20:03:13 by amsbai            #+#    #+#             */
+/*   Updated: 2024/11/26 00:34:47 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libftprintf.h"
 
-# include "libftprintf/libftprintf.h"
-# include <stdarg.h>
+int	printaddress(unsigned long n)
+{
+	int		size;
+	char	*str;
 
-int	ft_printf(const char *s, ...);
-
-#endif
+	size = 0;
+	str = "0123456789abcdef";
+	if (n >= 16)
+		size += printaddress(n / 16);
+	size += ft_putchar(str[n % 16]);
+	return (size);
+}
