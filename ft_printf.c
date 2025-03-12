@@ -6,7 +6,7 @@
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:15:46 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/27 18:46:44 by amsbai           ###   ########.fr       */
+/*   Updated: 2025/02/27 13:40:45 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,6 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (size);
 }
-
 
 // int main()
 // {

@@ -6,7 +6,7 @@
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 23:16:47 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/25 20:00:26 by amsbai           ###   ########.fr       */
+/*   Updated: 2025/02/28 11:00:32 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libftprintf/libftprintf.h"
 # include <stdarg.h>
+# include "../libft/libft.h"
 
 int	ft_printf(const char *s, ...);
 

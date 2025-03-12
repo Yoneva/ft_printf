@@ -6,7 +6,7 @@
 /*   By: amsbai <amsbai@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 21:07:51 by amsbai            #+#    #+#             */
-/*   Updated: 2024/11/25 23:13:59 by amsbai           ###   ########.fr       */
+/*   Updated: 2025/02/16 17:46:02 by amsbai           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct a_flags{
 int	ft_putchar(char c);
 int	ft_putnbr(long n, char hexa, t_flags a, int c);
 int	ft_putstr(char *s);
-int	ft_strlen(char *str);
 int	hexamol(unsigned long n, char c, int a, t_flags hh);
 int	printcc(char *s, int i);
 int	printaddress(unsigned long n);
